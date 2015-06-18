@@ -81,7 +81,7 @@
         right: 460px; } }
   .leaflet-sidebar .close {
     position: absolute;
-    right: -187%;
+    left: 300%;
     top: 15px;
     width: 20px;
     height: 20px;

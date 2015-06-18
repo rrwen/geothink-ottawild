@@ -11,39 +11,42 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="js/leaflet/leaflet.css" />
-	<link rel="stylesheet" href="js/leaflet.draw/dist/leaflet.draw.css"></script>
 	<link rel="stylesheet" href="js/leaflet.search/src/leaflet-search.css" />
 	<link rel="stylesheet" href="js/leaflet.sidebar/src/L.Control.Sidebar.css" />
 	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="js/leaflet.easybutton/src/easy-button.css">
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="js/leaflet.fullscreen/Control.FullScreen.css" />
 	
 	<!-- Initial Style -->
     <style>
 		html, body {
-			height: 96%;
+			height: 100%;
 			padding: 0;
 			margin: 0;
 		}
-		#map { height: 102.25%;}
+		#map { height: 92.5%;}
 	
 		#top {
 			width: 100%;
-			height: 6%;
+			height: 5.5%;
 			background: black;
 			margin: 0 0 0 0;
 			padding: 0.75%;
 			font-size: 150%;
 			color: white;
 		}
+		#bottom {
+			width: 100%;
+			height: 2%;
+			background: black;
+		}
 		
 		#sidebar, #profile {
-			width: 293%;
+			width: 310%;
 		}
 		
 		.intro > .modal-dialog{
-			width:85% !important;
+			width:70% !important;
 		}
 		
 		.button{
@@ -146,15 +149,23 @@
 	<div id="top">
 		<nav id="primary_nav_wrap">
 		<ul>
-		<li style="background:none">Ottawild&nbsp</li>
+		<li style="background:none;color:#31a354;">Ottawild&nbsp</li>
 		  <li><a href="#">About</a>
 			<ul>
 			  The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.
+			  <br><br>One Million Ottawild Experiences seeks to fulfill this purpose by:
+			  <br>• Creating conversation about Ottawa's natural areas
+			  <br>• Providing easy to find information about natural areas
+			  <br>• Increasing knowledge about natural areas through crowdsourced discovery and sharing
+			  <br><br>This is a prototype submitted to the City of Ottawa for the 2015 Geothink Summer Institute.
+			  <br><br>• <b>City of Ottawa:</b> ottawa.ca/en
+			  <br>• <b>Geothink Summer Institute:</b> summerinstitute.geothink.ca/
 			</ul>
 		  </li>
 		  <li><a href="#">Partners</a>
 			<ul>
-				• City Councillors
+				Some example partners...
+				<br>• City Councillors
 				<br>• Ottawa 2017
 				<br>• Parks, Recreation & Cultural Services Department
 				<br>• Ottawa Public Health
@@ -169,7 +180,8 @@
 		  </li>
 		  <li><a href="#">Collaborators</a>
 			<ul>
-				• Public partners, federal agencies and departments
+				Some example collaborators...
+				<br>• Public partners, federal agencies and departments
 				<br>• Tourism Sector
 				<br>• Canadian Museum of Nature
 				<br>• Universities and Colleges Environmental Programs
@@ -181,25 +193,25 @@
 		  </li>
 		  <li><a href="#">Contact</a>
 			<ul>
-			  <b>Ottawild</b>
-			  <br>100 Anywhere Street East
-			  <br>Ottawa, ON, K1P 1J1
-			  <br>Email: ottawild@mail.ca
-			  <br>Phone: (000)000-0000
-			  <br>Fax: (000)000-0000
+			  <b>The Team:</b>
+			  <br><b>• Web Development and Design:</b> Richard Wen (init.r.w@gmail.com)
+			  <br><b>• Wireframing:</b> Samantha Bigs, Paulina Marczak
+			  <br><b>• Presentation:</b> Mark Gill
+			  <br><b>• Legal:</b> Cheryl Power
+			  <br><br><b>Geothink:</b> http://geothink.ca/
 			</ul>
 		  </li>
 		</ul>
 		</nav>
 	</div>
 	<div id="map"></div>
-	<div id="sidebar"><img onclick="chgexp()" src="images/experiences1.jpg" style="width:99.5%;height:99%;"></div>
-	<div id="profile"><img src="images/profile.jpg" style="width:90%;height:99%;"></div>
+	<div id="sidebar"><img onclick="chgexp()" src="images/experiences1.jpg" style="height:99%;"></div>
+	<div id="profile"><img src="images/profile.jpg" style="height:99%;"></div>
+	<div id="bottom"></div>
 	
 	<!-- Libraries -->
 	<script src="data/parks.json" type="text/javascript"></script>
 	<script src="js/leaflet/leaflet.js"></script><!-- leaflet.js -->
-	<script src="js/leaflet.draw/dist/leaflet.draw.js"></script><!-- leaflet.draw.js -->
 	<script src="js/leaflet.search/src/leaflet-search.js"></script> <!-- leaflet.search.js -->
 	<script src="js/leaflet.sidebar/src/L.Control.Sidebar.js"></script> <!-- leaflet.sidebar.js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jquery.js -->
@@ -230,27 +242,22 @@
         map.addControl(sidebar);
 		// For demonstration purposes
 		function chgexp(){
-			sidebar.setContent('<img onclick="chgexp2()" src="images/experiences2.jpg" style="width:99.5%;height:99%;">');
+			sidebar.setContent('<img onclick="chgexp2()" src="images/experiences2.jpg" style="height:99%;">');
 		};
 		function chgexp2(){
-			sidebar.setContent('<img onclick="chgexp()" src="images/experiences1.jpg" style="width:99.5%;height:99%;">');
+			sidebar.setContent('<img onclick="chgexp()" src="images/experiences1.jpg" style="height:99%;">');
 		};
 		
 		// 1.4 Add data
 		L.geoJson(parks,{
 			style: {
-			"color": "green",
+			"color": "#31a354",
 			"weight":3,
 			"opacity":0.9}
 		}).addTo(map).on('click',function (e) {
             sidebar.show();
 			map.closePopup();
         });
-		
-		// 1.4.1 Add full screen
-		L.control.fullscreen({
-		  position: 'topleft'
-		}).addTo(map);
 		
 		// 1.5 Add Profile
 		var profile = L.control.sidebar('profile', {
@@ -294,7 +301,7 @@
 		
 		// 2. Initial Bootbox
 		bootbox.dialog({
-		  message: '<img src="images/intro.jpg" style="width:95%;">',
+		  message: '<img src="images/intro.jpg" style="width:99%;">',
 		  className: "intro",
 		  buttons: {
 			enter: {
