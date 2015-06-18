@@ -5,8 +5,8 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 **Access the website [here](http://rwenite.github.io/ottawild-prototype/).**
 
 <blockquote>
-<p>The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.</p>
-</blockquote>_- City of Ottawa_ 
+<p>The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.</p>_- City of Ottawa_ 
+</blockquote>
 
 One Million Ottawild Experiences seeks to fulfill this purpose by:
 * Creating conversation about Ottawa's natural areas 
