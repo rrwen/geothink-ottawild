@@ -1,65 +1,326 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+
   <head>
-    <meta charset="UTF-8">
-    <title>Ottawild by rwenite</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <title>Ottawild</title>
+	
+	<!-- Metadata -->
+	<meta name="application-name" content="Ottawild" />
+	<meta name="author" content="Richard Wen @ Ryerson University" />
+	<meta name="description" content="Prototype for Ottawild Map" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="js/leaflet.draw/dist/leaflet.draw.css"></script>
+	<link rel="stylesheet" href="js/leaflet.search/src/leaflet-search.css" />
+	<link rel="stylesheet" href="js/leaflet.sidebar/src/L.Control.Sidebar.css" />
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/leaflet.easybutton/src/easy-button.css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="js/leaflet.fullscreen/Control.FullScreen.css" />
+	
+	<!-- Initial Style -->
+    <style>
+		html, body {
+			height: 96%;
+			padding: 0;
+			margin: 0;
+		}
+		#map { height: 102.25%;}
+	
+		#top {
+			width: 100%;
+			height: 6%;
+			background: black;
+			margin: 0 0 0 0;
+			padding: 0.75%;
+			font-size: 150%;
+			color: white;
+		}
+		
+		#sidebar, #profile {
+			width: 293%;
+		}
+		
+		.intro > .modal-dialog{
+			width:85% !important;
+		}
+		
+		.button{
+			color: white;
+			background: black;
+		}
+		
+		 .button:hover {
+			background-color: gray;
+			color: white;
+		}
+		
+		.search-input, .leaflet-control-search {
+			max-width:400px;
+			width: 400px
+		}
+
+		#primary_nav_wrap ul
+		{
+			list-style:none;
+			position:absolute;
+			float:left;
+			margin:0;
+			padding:0;
+			z-index:1;
+		}
+
+		#primary_nav_wrap ul a
+		{
+			display:block;
+			color:white;
+			text-decoration:none;
+			font-weight:700;
+			font-size:12px;
+			line-height:32px;
+			padding:0 15px;
+			font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+		}
+
+		#primary_nav_wrap ul li
+		{
+			position:relative;
+			float:left;
+			margin:0;
+			padding:0;
+		}
+
+		#primary_nav_wrap ul li.current-menu-item
+		{
+			background:black
+		}
+
+		#primary_nav_wrap ul li:hover
+		{
+			background:gray;
+		}
+
+		#primary_nav_wrap ul ul
+		{
+			display:none;
+			position:absolute;
+			top:100%;
+			left:0;
+			background:white;
+			color: black;
+			padding:10px;
+			font-size: 80%;
+			width: 700%;
+		}
+
+		#primary_nav_wrap ul ul li
+		{
+			float:none;
+			width:200px;
+		}
+
+		#primary_nav_wrap ul ul a
+		{
+			line-height:120%;
+			padding:10px 15px
+		}
+
+		#primary_nav_wrap ul ul ul
+		{
+			top:0;
+			left:100%
+		}
+
+		#primary_nav_wrap ul li:hover > ul
+		{
+			display:block
+		}
+		
+    </style>
+	
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Ottawild</h1>
-      <h2 class="project-tagline">Ottawild Prototype for Geothink Summer Institute 2015</h2>
-      <a href="https://github.com/rwenite/ottawild" class="btn">View on GitHub</a>
-      <a href="https://github.com/rwenite/ottawild/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/rwenite/ottawild/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/rwenite/ottawild">Ottawild</a> is maintained by <a href="https://github.com/rwenite">rwenite</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
   
+  <!-- Main -->
+  <body>
+	<div id="top">
+		<nav id="primary_nav_wrap">
+		<ul>
+		<li style="background:none">Ottawild&nbsp</li>
+		  <li><a href="#">About</a>
+			<ul>
+			  The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.
+			</ul>
+		  </li>
+		  <li><a href="#">Partners</a>
+			<ul>
+				• City Councillors
+				<br>• Ottawa 2017
+				<br>• Parks, Recreation & Cultural Services Department
+				<br>• Ottawa Public Health
+				<br>• Economic Development and Innovation
+				<br>• Forestry Services, Public Works Department
+				<br>• Neighbourhood Connection Office
+				<br>• Transportation Planning, Planning and Growth Management 
+				<br>• Cleaning the Capital
+				<br>• Rural Affairs Office
+				<br>• Grants Programs
+			</ul>
+		  </li>
+		  <li><a href="#">Collaborators</a>
+			<ul>
+				• Public partners, federal agencies and departments
+				<br>• Tourism Sector
+				<br>• Canadian Museum of Nature
+				<br>• Universities and Colleges Environmental Programs
+				<br>• School Boards
+				<br>• Canadian Organizations
+				<br>• Outdoor Enthusiasts
+				<br>• Community organizations
+			</ul>
+		  </li>
+		  <li><a href="#">Contact</a>
+			<ul>
+			  <b>Ottawild</b>
+			  <br>100 Anywhere Street East
+			  <br>Ottawa, ON, K1P 1J1
+			  <br>Email: ottawild@mail.ca
+			  <br>Phone: (000)000-0000
+			  <br>Fax: (000)000-0000
+			</ul>
+		  </li>
+		</ul>
+		</nav>
+	</div>
+	<div id="map"></div>
+	<div id="sidebar"><img onclick="chgexp()" src="images/experiences1.jpg" style="width:99.5%;height:99%;"></div>
+	<div id="profile"><img src="images/profile.jpg" style="width:90%;height:99%;"></div>
+	
+	<!-- Libraries -->
+	<script src="data/parks.json" type="text/javascript"></script>
+	<script src="js/leaflet/leaflet.js"></script><!-- leaflet.js -->
+	<script src="js/leaflet.draw/dist/leaflet.draw.js"></script><!-- leaflet.draw.js -->
+	<script src="js/leaflet.search/src/leaflet-search.js"></script> <!-- leaflet.search.js -->
+	<script src="js/leaflet.sidebar/src/L.Control.Sidebar.js"></script> <!-- leaflet.sidebar.js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jquery.js -->
+	<script src="js/bootbox/bootbox.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/leaflet.easybutton/src/easy-button.js"></script>
+	<script src="js/leaflet.fullscreen/Control.FullScreen.js"></script>
+	
+	<script>
+		
+		// 1.1 Create Leaflet map
+		var map = L.map('map').setView([45.4214, -75.6919], 13);
+
+		// 1.2 Pull OSM tiles and add to Leaflet map
+		L.tileLayer(
+			'http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
+			{attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			maxZoom: 17}
+		).addTo(map);
+		
+		// 1.3 Add Sidebar Panel
+		var sidebar = L.control.sidebar('sidebar', {
+            closeButton: true,
+            position: 'left'
+        });
+        map.addControl(sidebar);
+		// For demonstration purposes
+		function chgexp(){
+			sidebar.setContent('<img onclick="chgexp2()" src="images/experiences2.jpg" style="width:99.5%;height:99%;">');
+		};
+		function chgexp2(){
+			sidebar.setContent('<img onclick="chgexp()" src="images/experiences1.jpg" style="width:99.5%;height:99%;">');
+		};
+		
+		// 1.4 Add data
+		L.geoJson(parks,{
+			style: {
+			"color": "green",
+			"weight":3,
+			"opacity":0.9}
+		}).addTo(map).on('click',function (e) {
+            sidebar.show();
+			map.closePopup();
+        });
+		
+		// 1.4.1 Add full screen
+		L.control.fullscreen({
+		  position: 'topleft'
+		}).addTo(map);
+		
+		// 1.5 Add Profile
+		var profile = L.control.sidebar('profile', {
+            closeButton: true,
+            position: 'left'
+        });
+        map.addControl(profile);
+		
+	    L.easyButton({
+		  position: 'topleft',      // inherited from L.Control -- the corner it goes in
+		  type: 'replace',
+		  leafletClasses: true,     // use leaflet classes to style the button?
+		  states:[{                 // specify different icons and responses for your button
+			stateName: 'profile',
+			onClick: function(button, map){
+			  profile.show();
+			},
+			icon: 'fa-user'
+		  }]
+		}).addTo(map);
+		
+		map.on('click', function () {
+            sidebar.hide();
+			profile.hide();
+        });
+		
+		// 1.6 Add search control
+		map.addControl(new L.Control.Search({
+			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+			jsonpParam: 'json_callback',
+			propertyName: 'display_name',
+			propertyLoc: ['lat','lon'],
+			circleLocation: true,
+			markerLocation: true,			
+			autoType: false,
+			autoCollapse: true,
+			minLength: 2,
+			zoom: 15,
+			position: 'topright'
+		}));
+		
+		// 2. Initial Bootbox
+		bootbox.dialog({
+		  message: '<img src="images/intro.jpg" style="width:95%;">',
+		  className: "intro",
+		  buttons: {
+			enter: {
+			  label: "Enter",
+			  className: "button",
+			  callback: function() {
+			  }
+			},
+			login: {
+			  label: "Login",
+			  className: "button",
+			  callback: function() {
+			  }
+			},
+			signup: {
+			  label: "Sign Up",
+			  className: "button",
+			  callback: function() {
+			  }
+			}
+		  }
+		});
+		
+		// 3.1 Initial Popup
+		var helpPopup = L.popup()
+		helpPopup.setContent('Click on any green area to start your experience!').setLatLng(map.getCenter()).openOn(map);
+		
+    </script>
+	
   </body>
 </html>
-
