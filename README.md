@@ -6,7 +6,7 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 
 <blockquote>
 <p>The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.</p>
-_- City of Ottawa_ 
+- City of Ottawa
 </blockquote>
 
 One Million Ottawild Experiences seeks to fulfill this purpose by:
