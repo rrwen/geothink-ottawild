@@ -2,6 +2,8 @@
 
 A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottawa.ca/en) that won first place in the 2015 [Geothink Summer Institute](http://summerinstitute.geothink.ca/) (June 15-17).
 
+Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en).
+
 **Access the website [here](http://rwenite.github.io/ottawild-prototype/).**
 
 <blockquote>
@@ -13,3 +15,4 @@ One Million Ottawild Experiences seeks to fulfill this purpose by:
 * Creating conversation about Ottawa's natural areas 
 * Providing easy to find information about natural areas 
 * Increasing knowledge about natural areas through crowdsourced discovery and sharing.
+
