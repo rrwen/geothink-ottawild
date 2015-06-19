@@ -81,13 +81,12 @@
         right: 450px; } }
   .leaflet-sidebar .close {
     position: absolute;
-    left: 75vw;
-    top: 2vw;
-    width: 10px;
-    height: 10px;
+    left: 2vw;
+    top: 3vh;
+    width: 1vmin;
+    height: 1vmin;
     color: #333;
-    font-size: 25pt;
-    line-height: 1em;
+    line-height: 2vh;
     text-align: center;
     background: white;
     cursor: pointer;
