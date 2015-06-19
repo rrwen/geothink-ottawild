@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Ottawild</title>
+    <title>Ottawild Prototype</title>
 	
 	<!-- Metadata -->
 	<meta name="application-name" content="Ottawild Prototype" />
@@ -207,8 +207,8 @@
 		</nav>
 	</div>
 	<div id="map"></div>
-	<div id="sidebar"><img onclick="chgexp()" src="images/experiences1.jpg" style="height:99%;"></div>
-	<div id="profile"><img src="images/profile.jpg" style="height:99%;"></div>
+	<div id="sidebar" style="font-size:2vmin;color:red;overflow: hidden;"><img onclick="chgexp()" src="images/experiences1.jpg" style="height:93%;"><br>These features are for demo, and are not interactive.</div>
+	<div id="profile" style="font-size:2vmin;color:red;overflow: hidden;"><img src="images/profile.jpg" style="height:93%;"><br>These features are for demo, and are not interactive.</div>
 	<div id="bottom"></div>
 	
 	<!-- Libraries -->
@@ -244,10 +244,10 @@
         map.addControl(sidebar);
 		// For demonstration purposes
 		function chgexp(){
-			sidebar.setContent('<img onclick="chgexp2()" src="images/experiences2.jpg" style="height:99%;">');
+			sidebar.setContent('<img onclick="chgexp2()" src="images/experiences2.jpg" style="height:93%;"><p style="font-size:2vmin;color:red;">These features are for demo, and are not interactive.</p>');
 		};
 		function chgexp2(){
-			sidebar.setContent('<img onclick="chgexp()" src="images/experiences1.jpg" style="height:99%;">');
+			sidebar.setContent('<img onclick="chgexp()" src="images/experiences1.jpg" style="height:93%;"><p style="font-size:2vmin;color:red;">These features are for demo, and are not interactive.</p>');
 		};
 		
 		// 1.4 Add data
@@ -303,7 +303,8 @@
 		
 		// 2. Initial Bootbox
 		bootbox.dialog({
-		  message: '<img src="images/intro.jpg" style="width:99%;">',
+		  closeButton: false,
+		  message: '<div style="font-size:2vmin;color:red;overflow: hidden;"><img src="images/intro.jpg" style="width:93%;"><br>These features are for demo, and are not interactive.</div>',
 		  className: "intro",
 		  buttons: {
 			enter: {
