@@ -16,3 +16,9 @@ One Million Ottawild Experiences seeks to fulfill this purpose by:
 * Providing easy to find information about natural areas 
 * Increasing knowledge about natural areas through crowdsourced discovery and sharing.
 
+The GeoOne Team:
+* Website/Developer: Richard Wen (init.r.w@gmail.com)
+* Wireframing: Samantha Bigs, Paulina Marczak 
+* Presentation: Mark Gill 
+* Legal: Cheryl Power 
+
