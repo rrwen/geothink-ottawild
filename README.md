@@ -4,7 +4,7 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 
 Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en).
 
-**Access the website [here](http://rwenite.github.io/ottawild-prototype/).**
+**[Access the website](http://rwenite.github.io/ottawild-prototype/).**
 
 <blockquote>
 <p>The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.</p>
@@ -21,4 +21,6 @@ The GeoOne team:
 * **Wireframing:** Samantha Bigs, Paulina Marczak 
 * **Presentation:** Mark Gill 
 * **Legal:** Cheryl Power 
+
+**[View the proposal](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view).**
 
