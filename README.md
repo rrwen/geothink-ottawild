@@ -5,6 +5,7 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en).
 
 **[Access the website](http://rwenite.github.io/ottawild-prototype/).**
+
 **[View the proposal](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view).**
 
 <blockquote>
