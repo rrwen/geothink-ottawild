@@ -5,7 +5,16 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 * **View the [Geothink blog post](http://geothink.ca/city-of-ottawa-selects-winner-out-of-seven-student-designed-crowdsourcing-applications-geothink-summer-institute-day-3/)**
 * **View the [website](http://rwenite.github.io/geothink-ottawild/)**
 * **View the [proposal presentation](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view).**
+  
+  
+# The GeoOne team:
+* **Website/Developer:** Richard Wen (init.r.w@gmail.com)
+* **Wireframing:** Samantha Bigs, Paulina Marczak 
+* **Presentation:** Mark Gill 
+* **Legal:** Cheryl Power 
 
+
+# Purpose 
 
 <blockquote>
 <p>The purpose of Ottawild is to increase awareness of the City’s natural areas among residents and visitors to make nature a part of Ottawa’s identity and positive reputation.</p>
@@ -17,11 +26,7 @@ One Million Ottawild Experiences seeks to fulfill this purpose by:
 * Providing easy to find information about natural areas 
 * Increasing knowledge about natural areas through crowdsourced discovery and sharing.
 
-The GeoOne team:
-* **Website/Developer:** Richard Wen (init.r.w@gmail.com)
-* **Wireframing:** Samantha Bigs, Paulina Marczak 
-* **Presentation:** Mark Gill 
-* **Legal:** Cheryl Power 
+
 
 
 _Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en)_
