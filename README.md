@@ -8,7 +8,7 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
   
   
 # The GeoOne team:
-* **Website/Developer:** Richard Wen (init.r.w@gmail.com)
+* **Website/Developer:** Richard Wen (rwen@ryerson.ca)
 * **Wireframing:** Samantha Bigs, Paulina Marczak 
 * **Presentation:** Mark Gill 
 * **Legal:** Cheryl Power 
