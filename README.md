@@ -4,7 +4,7 @@ A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottaw
 
 * **View the [Geothink blog post](http://geothink.ca/city-of-ottawa-selects-winner-out-of-seven-student-designed-crowdsourcing-applications-geothink-summer-institute-day-3/)**
 * **View the [website](http://rwenite.github.io/geothink-ottawild/)**
-* **View the [proposal presentation](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view).**
+* **View the [proposal presentation](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view)**
   
 # Purpose 
 
