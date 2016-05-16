@@ -1,4 +1,4 @@
-#Ottawild Website (Prototype)
+# One Million Ottawild Experiences
 
 A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottawa.ca/en) that won first place in the 2015 [Geothink Summer Institute](http://summerinstitute.geothink.ca/) competition (June 15-17).
 
