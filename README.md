@@ -1,6 +1,6 @@
 #Ottawild Website (Prototype)
 
-A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottawa.ca/en) that won first place in the 2015 [Geothink Summer Institute](http://summerinstitute.geothink.ca/) competition (June 15-17).
+A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottawa.ca/en) that won first place in the 2015 [Geothink Summer Institute](http://summerinstitute.geothink.ca/) competition (June 15-17). View the [blog post](http://geothink.ca/city-of-ottawa-selects-winner-out-of-seven-student-designed-crowdsourcing-applications-geothink-summer-institute-day-3/).
 
 Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en).
 
