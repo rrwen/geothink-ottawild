@@ -20,7 +20,7 @@ One Million Ottawild Experiences seeks to fulfill this purpose by:
  
 _Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en)_ 
  
-# Authors:
+# Team:
 * **Website/Developer:** Richard Wen (rwenite@gmail.com)
 * **Wireframing:** Samantha Bigs, Paulina Marczak 
 * **Presentation:** Mark Gill 
