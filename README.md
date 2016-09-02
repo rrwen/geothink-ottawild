@@ -3,7 +3,7 @@
 A prototype crowdsourcing website submitted to the [City of Ottawa](http://ottawa.ca/en) that won first place in the 2015 [Geothink Summer Institute](http://summerinstitute.geothink.ca/) competition (June 15-17).
 
 * **[Geothink blog post](http://geothink.ca/city-of-ottawa-selects-winner-out-of-seven-student-designed-crowdsourcing-applications-geothink-summer-institute-day-3/)**
-* **[Prototype Website](http://rwenite.github.io/geothink-ottawild/)**
+* **[Prototype Website](http://rrwen.github.io/geothink-ottawild/)**
 * **[Proposal Presentation](https://drive.google.com/a/ryerson.ca/file/d/0B0Y-aJ_lG1qMU1FUcVdOaVFpZnc/view)**
   
 # Purpose 
@@ -21,7 +21,7 @@ One Million Ottawild Experiences seeks to fulfill this purpose by:
 _Parks data provided by [OpenData Ottawa](http://data.ottawa.ca/en)_ 
  
 # Team:
-* **Website/Developer:** Richard Wen (rwenite@gmail.com)
+* **Website/Developer:** Richard Wen (rich.rwen@gmail.com)
 * **Wireframing:** Samantha Bigs, Paulina Marczak 
 * **Presentation:** Mark Gill 
 * **Legal:** Cheryl Power 
